@@ -87,8 +87,8 @@ main {
 .categories {
   text-align: center;
   display: grid;
-  grid-template-areas: "col1 col2 col3";
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: (3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .category {
@@ -128,11 +128,30 @@ button:hover {
 .sponsors {
   display: grid;
   text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .sponsors > div {
   background-color: whitesmoke;
   margin: 2rem;
+}
+
+#lowsense2 {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#bottomSponser1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#bottomSponser2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
 }
 
 /* ===== Footer ====== */
